@@ -11,6 +11,7 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      
       ```
     	curl -k https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw -H  "Authorization: Splunk 295013c3-49bc-4f7d-bb88-07baa0acf905" -d '{"event":"This is test http event collector"}
+     
       ```
     	
      
