@@ -20,9 +20,6 @@ output "identity-oidc-issuer" {
   value = data.aws_eks_cluster.my_cluster.identity[0].oidc[0].issuer
 }
 
-locals {
-  aws_region   = "us-east-1"
-}
 
 ######################################################################################
 # K8S and Helm Provider
