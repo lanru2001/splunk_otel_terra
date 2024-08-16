@@ -39,7 +39,6 @@ The following steps are required to start using Splunk OTEL to collect logs and 
     pod/splunk-otel-collector-agent-n7dgz   1/1     Running   0          20m
     pod/splunk-otel-collector-agent-w9nsm   1/1     Running   0          20m
     pod/splunk-otel-collector-agent-wbl4x   1/1     Running   0          20m
-    
     NAME                                         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
     daemonset.apps/splunk-otel-collector-agent   5         5         5       5            5           kubernetes.io/os=linux   20m
     ```
