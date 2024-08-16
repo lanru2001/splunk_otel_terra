@@ -28,17 +28,17 @@ terraform {
 
 module "dev_splunk_otel" {
     
-    source          = "../../"
-    cluster_name    = "test"
-    splunk_endpoint = "https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw"
-    hec_token       = "6e81bca3-fe7a-4a0e-930a-1c2e3a52698f"
-    index           = "eks"
-    insecure_skip_verify = true
-    fluentd_repo    = "splunk/fluentd-hec"
-    fluentd_tag     = "1.3.3"
-    fluentd_pullPolicy = "IfNotPresent"
-    otelcol_repo    = "quay.io/signalfx/splunk-otel-collector"
-    otelcol_tag     = "0.105.0"
-    otelcol_pullPolicy = "IfNotPresent"
+    source                = "../../"
+    cluster_name          = "test"
+    splunk_endpoint       = "https://sub-domain.domain.com:8088/services/collector/raw"
+    hec_token             = "hec-token-from-splunk-platform-here"
+    index                 = "eks"
+    insecure_skip_verify  = true
+    fluentd_repo          = "splunk/fluentd-hec"
+    fluentd_tag           = "1.3.3"
+    fluentd_pullPolicy    = "IfNotPresent"
+    otelcol_repo          = "quay.io/signalfx/splunk-otel-collector"
+    otelcol_tag           = "0.105.0"
+    otelcol_pullPolicy    = "IfNotPresent"
 
 }
