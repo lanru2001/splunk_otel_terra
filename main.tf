@@ -1,4 +1,4 @@
-# Deploy the Cluster Splunk Open Telemetry  using the Helm provider
+# Deploy the Splunk Open Telemetry using the Helm provider
 resource "helm_release" "splunk_otel_collector" {
 
   name             = "splunk-otel-collector"
