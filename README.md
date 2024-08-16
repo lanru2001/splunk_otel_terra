@@ -15,7 +15,7 @@ The following steps are required to start using Splunk OTEL to collect logs and 
         ```
        
      
-  4. Use the following linux networking troubleshooting commands to validate host resolve to ip address
+  4. Use the following linux networking troubleshooting commands to validate host resolve to IP Address
      
      ```bash
      nslookup prd-p-boa0r.splunkcloud.com
