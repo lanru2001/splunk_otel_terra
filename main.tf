@@ -1,10 +1,16 @@
-#Deploy the Cluster Autoscaler using the Helm provider
+# Deploy the Cluster Splunk Open Telemetry  using the Helm provider
 resource "helm_release" "splunk_otel_collector" {
-  name = "splunk-otel-collector"
-  repository = "https://github.com/signalfx/splunk-otel-collector-chart" 
-  chart = "splunk-otel-collector" 
-  namespace = "splunk-logging"
-  version   = "0.105.0"
+
+  name             = "splunk-otel-collector"
+  repository       = "https://signalfx.github.io/splunk-otel-collector-chart"
+  chart            = "splunk-otel-collector" 
+  namespace        = "splunk-logging"
+  version          = "0.105.0"
+  atomic           = true
+  cleanup_on_fail  = true
+  create_namespace = false
+  timeout          = 300
+
 
   set {
     name = "clusterName"
@@ -13,7 +19,7 @@ resource "helm_release" "splunk_otel_collector" {
 
   set {
     name = "splunkPlatform.endpoint"
-    value = "${var.splunk_endpoint}" 
+    value = "${var.splunk_endpoint}"
   }
 
   set {
@@ -23,17 +29,17 @@ resource "helm_release" "splunk_otel_collector" {
 
   set {
     name = "splunkPlatform.index"
-    value = "${var.index}" 
+    value = "${var.index}"  
   }
 
   set {
     name = "splunkPlatform.insecureSkipVerify"
-    value = "${var.insecure_skip_verify }"  
+    value = "${var.insecure_skip_verify }" 
   }
 
   set {
     name = "image.fluentd.repository"
-    value = "${var.fluentd_repo}" 
+    value = "${var.fluentd_repo}"  
   }
 
   set {
