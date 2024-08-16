@@ -15,24 +15,24 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      
 
      
-  5. Use the following linux networking troubleshooting commands to validate host resolve to ip address
+  4. Use the following linux networking troubleshooting commands to validate host resolve to ip address
      
      ```bash
      nslookup prd-p-boa0r.splunkcloud.com
      host prd-p-boa0r.splunkcloud.com
      ```
      
-  7. Create a namespace for Splunk OTEL installation
+  5. Create a namespace for Splunk OTEL installation
      
      ```bash
      kubectl create namespace splunk-logging
      ```
 
-  9. Install Splunk OTEL on the cluster and set values for endpoint, HEC token, index, insecureSkipVerify and Cluster name.
+  6. Install Splunk OTEL on the cluster and set values for endpoint, HEC token, index, insecureSkipVerify and Cluster name.
      
-  10. Validate the installation via the kubectl cli
+  7. Validate the installation via the kubectl cli
   
-    
+  
     kubectl get all -n splunk-logging
 
     NAME                                    READY   STATUS    RESTARTS   AGE
