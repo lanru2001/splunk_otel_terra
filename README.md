@@ -11,7 +11,6 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      
       ```bash
     	curl -k https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw -H  "Authorization: Splunk 295013c3-49bc-4f7d-bb88-07baa0acf905" -d '{"event":"This is test http event collector"}
-     
     	```
 
      
@@ -20,7 +19,6 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      ```bash
      nslookup prd-p-boa0r.splunkcloud.com
      host prd-p-boa0r.splunkcloud.com
-
      ```
      
   7. Create a namespace for Splunk OTEL installation
@@ -33,7 +31,7 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      
   10. Validate the installation via the kubectl cli
       
-     ```bash
+    ```bash
     kubectl get all -n splunk-logging
     NAME                                    READY   STATUS    RESTARTS   AGE
     pod/splunk-otel-collector-agent-fpx8q   1/1     Running   0          20m
