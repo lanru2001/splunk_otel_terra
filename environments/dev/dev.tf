@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-        bucket = "dlframe-tf-remote-dev-bkt"
+        bucket = "tf-remote-dev-bkt"
         key    = "project/splunk-otel/ds"
         region = "us-east-1"
     }
