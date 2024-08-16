@@ -13,52 +13,52 @@ resource "helm_release" "splunk_otel_collector" {
 
   set {
     name = "splunkPlatform.endpoint"
-    value = "${var.splunk_endpoint}"  #"https://splunk-hec.uscis.dhs.gov:8088"
+    value = "${var.splunk_endpoint}" 
   }
 
   set {
     name = "splunkPlatform.token"
-    value = "${var.hec_token}" #"FF3063B7-0037-47E6-8401-08074C6C05E0"
+    value = "${var.hec_token}" 
   }
 
   set {
     name = "splunkPlatform.index"
-    value = "${var.index}"  #"ess"
+    value = "${var.index}" 
   }
 
   set {
     name = "splunkPlatform.insecureSkipVerify"
-    value = "${var.insecure_skip_verify }"  #"true"
+    value = "${var.insecure_skip_verify }"  
   }
 
   set {
     name = "image.fluentd.repository"
-    value = "${var.fluentd_repo}"  #"splunk/fluentd-hec"
+    value = "${var.fluentd_repo}" 
   }
 
   set {
     name = "image.fluentd.tag"
-    value = "${var.fluentd_tag}"   #"1.3.3"
+    value = "${var.fluentd_tag}"
   }
 
   set {
     name = "image.fluentd.pullPolicy"
-    value = "${var.fluentd_pullPolicy}"  #"IfNotPresent"
+    value = "${var.fluentd_pullPolicy}"
   }
 
   set {
     name = "image.otelcol.repository"
-    value = "${var.otelcol_repo}"  #"quay.io/signalfx/splunk-otel-collector"
+    value = "${var.otelcol_repo}"
   }
 
   set {
     name = "image.otelcol.tag"
-    value = "${var.otelcol_tag}"  #"0.91.3"
+    value = "${var.otelcol_tag}"
   }
 
   set {
     name = "image.otelcol.pullPolicy"
-    value = "${var.otelcol_pullPolicy}"  #"IfNotPresent"
+    value = "${var.otelcol_pullPolicy}"
   }
 
 }
