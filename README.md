@@ -6,9 +6,9 @@ The idea of OpenTelemetry as a whole is to unify the data so it's suitable for e
 
 The following steps are required to start using Splunk OTEL to collect logs and metrics in Kubernetes cluster:
 
-  1.	Create an index to view the logs.
-  2.	Generate a Splunk HTTP Event Collector (HEC) token.
-  3.	Use curl to validate that the Splunk host is reachable.
+  1.	Create an index to view the logs
+  2.	Generate a Splunk HTTP Event Collector (HEC) token
+  3.	Use curl to validate that the Splunk host is reachable
        
         ```
         curl -k https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw -H "Authorization: Splunk 295013c3-49bc-4f7d-bb88-07baa0acf905" -d '{"event":"This is test http event collector"}
@@ -28,7 +28,7 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      kubectl create namespace splunk-logging
      ```
 
-  6. Install Splunk OTEL on the cluster and set values for endpoint, HEC token, index, insecureSkipVerify and Cluster name.
+  6. Install Splunk OTEL on the cluster and set values for endpoint, HEC token, index, insecureSkipVerify and Cluster name
      
   7. Validate the installation via the kubectl cli
   
