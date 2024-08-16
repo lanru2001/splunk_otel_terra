@@ -9,20 +9,23 @@ The following steps are required to start using Splunk OTEL to collect logs and 
   2.	Generate a Splunk HTTP Event Collector (HEC) token.
   3.	Use curl to validate that the Splunk host is reachable.
       ```
-    	curl -k https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw -H     "Authorization: Splunk 295013c3-49bc-4f7d-bb88-07baa0acf905" -d '{"event":"This is test http event collector"}
+    	curl -k https://prd-p-boa0r.splunkcloud.com:8088/services/collector/raw -H  "Authorization: Splunk 295013c3-49bc-4f7d-bb88-07baa0acf905" -d '{"event":"This is test http event collector"}
     	```
+     
   4. Use the following linux networking troubleshooting commands to validate host resolve to ip address
      ```
      nslookup prd-p-boa0r.splunkcloud.com
      host prd-p-boa0r.splunkcloud.com
 
      ```
+     
   5. Create a namespace for Splunk OTEL installation
      ```
      Kubectl create namespace splunk-logging
      ```
 
   6. Install Splunk OTEL on the cluster and set values for endpoint, HEC token, index, insecureSkipVerify and Cluster name.
+     
   7. Validate the installation via the kubectl cli
      ```
      kubectl get all -n splunk-logging
