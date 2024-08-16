@@ -32,7 +32,7 @@ The following steps are required to start using Splunk OTEL to collect logs and 
      
   7. Validate the installation via the kubectl cli
   
-  
+      ```
       kubectl get all -n splunk-logging
   
       NAME                                    READY   STATUS    RESTARTS   AGE
@@ -44,4 +44,4 @@ The following steps are required to start using Splunk OTEL to collect logs and 
   
       NAME                                         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
       daemonset.apps/splunk-otel-collector-agent   5         5         5       5            5           kubernetes.io/os=linux   20m
-      
+      ```
