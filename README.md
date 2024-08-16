@@ -33,15 +33,15 @@ The following steps are required to start using Splunk OTEL to collect logs and 
   7. Validate the installation via the kubectl cli
   
   
-    kubectl get all -n splunk-logging
-
-    NAME                                    READY   STATUS    RESTARTS   AGE
-    pod/splunk-otel-collector-agent-fpx8q   1/1     Running   0          20m
-    pod/splunk-otel-collector-agent-jv7jf   1/1     Running   0          20m
-    pod/splunk-otel-collector-agent-n7dgz   1/1     Running   0          20m
-    pod/splunk-otel-collector-agent-w9nsm   1/1     Running   0          20m
-    pod/splunk-otel-collector-agent-wbl4x   1/1     Running   0          20m
-
-    NAME                                         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
-    daemonset.apps/splunk-otel-collector-agent   5         5         5       5            5           kubernetes.io/os=linux   20m
-    
+      kubectl get all -n splunk-logging
+  
+      NAME                                    READY   STATUS    RESTARTS   AGE
+      pod/splunk-otel-collector-agent-fpx8q   1/1     Running   0          20m
+      pod/splunk-otel-collector-agent-jv7jf   1/1     Running   0          20m
+      pod/splunk-otel-collector-agent-n7dgz   1/1     Running   0          20m
+      pod/splunk-otel-collector-agent-w9nsm   1/1     Running   0          20m
+      pod/splunk-otel-collector-agent-wbl4x   1/1     Running   0          20m
+  
+      NAME                                         DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+      daemonset.apps/splunk-otel-collector-agent   5         5         5       5            5           kubernetes.io/os=linux   20m
+      
